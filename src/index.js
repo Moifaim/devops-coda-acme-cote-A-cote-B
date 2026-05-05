@@ -126,7 +126,6 @@ const server = http.createServer((req, res) => {
       return;
     }
 
-
     if (path === "/uptime") {
       writeJson(res, 200, {
         uptimeSeconds: Math.round(process.uptime())
@@ -134,6 +133,7 @@ const server = http.createServer((req, res) => {
       return;
     }
 
+    if (path === "/") {
       writeJson(res, 200, { status: "ok", result: add(2, 3) });
       return;
     }
