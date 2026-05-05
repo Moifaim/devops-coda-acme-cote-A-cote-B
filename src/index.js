@@ -109,8 +109,12 @@ const server = http.createServer((req, res) => {
       return;
     }
 
+    
     if (path === "/health") {
-      writeJson(res, 200, { status: "healthy" });
+      writeJson(res, 200, {
+        status: "healthy",
+        timestamp: new Date().toISOString()
+      });
       return;
     }
 
