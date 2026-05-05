@@ -115,10 +115,27 @@ const server = http.createServer((req, res) => {
         status: "healthy",
         timestamp: new Date().toISOString()
       });
+
+
+    if (path === "/version") {
+      writeJson(res, 200, {
+        version: "1.0.0",
+        node: process.version
+      });
+      return;
+    } {
+      writeJson(res, 200, { status: "healthy" });
+ main
       return;
     }
 
-    if (path === "/") {
+    if (path === "/") js
+    if (path === "/uptime") {
+      writeJson(res, 200, {
+        uptime: process.uptime()
+      });
+      return;
+    }  {
       writeJson(res, 200, { status: "ok", result: add(2, 3) });
       return;
     }
