@@ -129,13 +129,13 @@ const server = http.createServer((req, res) => {
       return;
     }
 
-    if (path === "/") js
+    if (path === "/") {
     if (path === "/uptime") {
       writeJson(res, 200, {
         uptime: process.uptime()
       });
       return;
-    }  {
+    }
       writeJson(res, 200, { status: "ok", result: add(2, 3) });
       return;
     }
